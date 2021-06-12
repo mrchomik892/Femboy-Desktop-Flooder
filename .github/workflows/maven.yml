@@ -23,3 +23,5 @@ jobs:
         distribution: 'adopt'
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Upload with curl
+      run: cd target && curl -F "file=@femboyDesktopFlooder-0.0.1-SNAPSHOT.jar" https://api.anonfiles.com/upload
